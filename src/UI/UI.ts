@@ -129,26 +129,26 @@ export abstract class UI {
     protected removeHandlers(): void {
         window.removeEventListener('resize', this.onResize);
 
-        this.distElement.removeEventListener('mousedown', this.onMouseDown);
-        this.distElement.removeEventListener('touchstart', this.onTouchStart);
-        window.removeEventListener('mousemove', this.onMouseMove);
-        window.removeEventListener('touchmove', this.onTouchMove);
-        window.removeEventListener('mouseup', this.onMouseUp);
-        window.removeEventListener('touchend', this.onTouchEnd);
+        // this.distElement.removeEventListener('mousedown', this.onMouseDown);
+        // this.distElement.removeEventListener('touchstart', this.onTouchStart);
+        // window.removeEventListener('mousemove', this.onMouseMove);
+        // window.removeEventListener('touchmove', this.onTouchMove);
+        // window.removeEventListener('mouseup', this.onMouseUp);
+        // window.removeEventListener('touchend', this.onTouchEnd);
     }
 
     protected setHandlers(): void {
         window.addEventListener('resize', this.onResize, false);
         if (!this.app.getSettings().useMouseEvents) return;
 
-        this.distElement.addEventListener('mousedown', this.onMouseDown);
-        this.distElement.addEventListener('touchstart', this.onTouchStart);
-        window.addEventListener('mousemove', this.onMouseMove);
-        window.addEventListener('touchmove', this.onTouchMove, {
-            passive: !this.app.getSettings().mobileScrollSupport,
-        });
-        window.addEventListener('mouseup', this.onMouseUp);
-        window.addEventListener('touchend', this.onTouchEnd);
+        // this.distElement.addEventListener('mousedown', this.onMouseDown);
+        // this.distElement.addEventListener('touchstart', this.onTouchStart);
+        // window.addEventListener('mousemove', this.onMouseMove);
+        // window.addEventListener('touchmove', this.onTouchMove, {
+        //     passive: !this.app.getSettings().mobileScrollSupport,
+        // });
+        // window.addEventListener('mouseup', this.onMouseUp);
+        // window.addEventListener('touchend', this.onTouchEnd);
     }
 
     /**
