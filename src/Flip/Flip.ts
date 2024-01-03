@@ -339,7 +339,8 @@ export class Flip {
         const frames = [];
         for (const p of points) frames.push(() => this.do(p));
 
-        const duration = this.getAnimationDuration(points.length);
+        let duration = this.getAnimationDuration(points.length);
+        duration =  this.flippingPage.getDensity() === PageDensity.HARD ? duration * 1.6 : duration
 
         this.render.startAnimation(frames, duration, () => {
             // callback function
