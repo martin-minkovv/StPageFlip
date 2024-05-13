@@ -184,7 +184,7 @@ export class HTMLRender extends Render {
             height: ${rect.height * 2}px;
             background: linear-gradient(${shadowDirection},
                 rgba(0, 0, 0, ${this.shadow.opacity}) 5%,
-                rgba(0, 0, 0, 0.05) 15%,
+                rgba(255, 255, 255, ${this.shadow.opacity * 2}) 15%,
                 rgba(0, 0, 0, ${this.shadow.opacity}) 35%,
                 rgba(0, 0, 0, 0) 100%);
             transform-origin: ${shadowTranslate}px 100px;
