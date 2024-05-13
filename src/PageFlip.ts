@@ -49,6 +49,10 @@ export class PageFlip extends EventObject {
         this.block = inBlock;
     }
 
+    public updateMinWidth(minWidth: number): void {
+        this.setting.minWidth = minWidth;
+    }
+
     /**
      * Destructor. Remove a root HTML element and all event handlers
      */
