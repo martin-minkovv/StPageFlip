@@ -309,11 +309,14 @@ export class Flip {
                     false
                 );
             } else {
-                this.do(this.render.convertToPage(globalPos));
+                this.render.startAnimationRenderLoop(() => {
+                    this.do(this.render.convertToPage(globalPos));
+                });
             }
         } else {
             this.setState(FlippingState.READ);
             this.render.finishAnimation();
+            this.render.stopAnimationRenderLoop();
 
             this.stopMove();
         }
